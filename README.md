@@ -69,7 +69,7 @@ git clone https://github.com/kenanozt1/eareye.git
 
 Bu proje üç kişilik bir ekip tarafından geliştirilmiştir:
 
-- **Kenan Öztürk** — [@kenanozt1](https://github.com/kenanozt1)
+- **Kenan Öztürk** — [@kenanozturk](https://github.com/kenanozturkk)
 - **Mehdi Özdemir** — [@mehdiozdemir](https://github.com/mehdiozdemir)]
 - **Sevgi Başar** — [@sevgibasar](https://github.com/Sevgibsr1)]
 

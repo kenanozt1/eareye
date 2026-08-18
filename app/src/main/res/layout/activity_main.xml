@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <!-- Main Menu Layout (Initially Visible) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonOpenCamera"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/button_open_camera_background"
+            android:src="@drawable/ic_camera_modern"
+            android:scaleType="fitCenter"
+            android:padding="50dp" 
+            android:contentDescription="@string/open_camera"
+            android:stateListAnimator="@anim/button_scale"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.35" /> 
+
+        <LinearLayout
+            android:id="@+id/emergency_buttons_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/buttonOpenCamera" 
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.2" 
+            android:layout_marginTop="32dp" 
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constrainedWidth="true">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonCallEmergencyContact"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:text="@string/call_emergency_contact"
+                android:background="@drawable/button_call_contact_background"
+                android:backgroundTint="@null"
+                android:textColor="@android:color/white"
+                android:paddingVertical="12dp" 
+                android:paddingHorizontal="8dp" 
+                android:layout_marginEnd="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSendLocation"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:text="@string/send_location"
+                android:background="@drawable/button_send_location_background"
+                android:backgroundTint="@null"
+                android:textColor="@android:color/white"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonCall112"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:text="@string/call_112"
+                android:background="@drawable/button_emergency_background"
+                android:backgroundTint="@null"
+                android:textColor="@android:color/white"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="8dp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Camera View Layout (Initially Hidden) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/camera_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/view_finder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:scaleType="fillStart" />
+
+        <com.eareye.eareye.OverlayView
+            android:id="@+id/overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:translationZ="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_finder"
+            app:layout_constraintEnd_toEndOf="@+id/view_finder"
+            app:layout_constraintStart_toStartOf="@+id/view_finder"
+            app:layout_constraintTop_toTopOf="@+id/view_finder" />
+
+        <TextView
+            android:id="@+id/inferenceTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="100ms" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gpu_toggle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="4dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ToggleButton
+                android:id="@+id/isGpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:textColor="@color/white"
+                android:textOff="@string/gpu"
+                android:textOn="@string/gpu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

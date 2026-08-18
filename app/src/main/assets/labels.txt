@@ -1,0 +1,12 @@
+atm
+bank
+çöpkutusu
+araba
+kedi
+köpek
+yesilışık
+yayayolu
+yayayoluişareti
+kırmızıışık
+merdiven
+sarıışık

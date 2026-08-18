@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">YOLOv8 TfLite</string>
+    <string name="gpu">GPU</string>
+    <string name="open_camera">Kamerayı Aç</string>
+    <string name="call_emergency_contact">Kişiyi Ara</string>
+    <string name="send_location">Konum Gönder</string>
+    <string name="call_112">112\'yi Ara</string>
+    <string name="camera_permission_required">Bu özelliği kullanmak için kamera izni gerekli.</string>
+    <string name="camera_permission_granted">Kamera izni verildi.</string>
+    <string name="camera_permission_denied">Nesne algılama için kamera izni gerekli.</string>
+    <string name="todo_call_contact">TODO: Acil Durum Kişisini Ara</string>
+    <string name="todo_send_location">TODO: Acil Durum Kişisine Konum Gönder</string>
+    <string name="todo_call_112">TODO: 112\'yi Ara</string>
+    <string name="camera_init_failed">Kamera başlatılamadı.</string>
+    <string name="camera_bind_failed">Kamera kullanım senaryoları bağlanamadı.</string>
+    <string name="all_permissions_granted">Tüm istenen izinler verildi.</string>
+    <string name="permissions_denied_limited_functionality">Bir veya daha fazla izin reddedildi. İşlevsellik sınırlı olabilir.</string>
+    <string name="location_permission_not_granted_sms">Konum içeren SMS göndermek için konum izni verilmedi.</string>
+    <string name="failed_to_make_call_check_permissions">Arama yapılamadı. İzinleri kontrol edin.</string>
+    <string name="location_sent_to">Konum %s kişisine gönderildi</string>
+    <string name="failed_to_send_sms">SMS gönderilemedi.</string>
+    <string name="could_not_get_location_sms">SMS göndermek için mevcut konum alınamadı.</string>
+    <string name="failed_to_get_location">Konum alınamadı.</string>
+    <string name="please_grant_permissions_in_settings">Lütfen ayarlardan izinleri verin.</string>
+    <string name="read_contacts_permission_required">Kişi seçmek için Kişileri Okuma izni gerekli.</string>
+    <string name="contact_selection_cancelled">Kişi seçimi iptal edildi.</string>
+    <string name="could_not_retrieve_phone_number">Seçilen kişiden telefon numarası alınamadı.</string>
+    <string name="call_permission_required_to_call">Arama yapmak için arama izni gerekli.</string>
+    <string name="emergency_contact_saved">Acil durum kişisi kaydedildi: %s</string>
+    <string name="calling_saved_contact">Kaydedilen acil durum kişisi aranıyor: %s</string>
+    <string name="no_emergency_contact_saved">Acil durum kişisi kaydedilmemiş. Lütfen önce birini seçin.</string>
+    <string name="long_press_to_change_contact"> (Değiştirmek için uzun basın)</string>
+    <string name="sms_location_permissions_granted_sending">SMS ve Konum izinleri verildi. Konum gönderiliyor...</string>
+    <string name="location_services_disabled_title">Konum Servisleri Devre Dışı</string>
+    <string name="location_services_disabled_message">Konumunuzu göndermek için lütfen cihaz ayarlarınızdan Konum Servislerini etkinleştirin.</string>
+    <string name="open_location_settings">Ayarları Aç</string>
+</resources>

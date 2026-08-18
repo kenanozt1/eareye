@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#FF6F00"/> <!-- Darker orange for pressed state -->
+            <size android:width="200dp" android:height="200dp"/>
+            <stroke android:width="4dp" android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#FFA726"
+                android:endColor="#FF8A00"
+                android:type="radial"
+                android:gradientRadius="150dp"/>
+            <size android:width="200dp" android:height="200dp"/>
+            <stroke android:width="2dp" android:color="#DDDDDD" />
+        </shape>
+    </item>
+</selector>
